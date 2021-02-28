@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/todo-management-react-redux/static/css/main.879325a2.chunk.css",
+    "main.js": "/todo-management-react-redux/static/js/main.a823de76.chunk.js",
+    "main.js.map": "/todo-management-react-redux/static/js/main.a823de76.chunk.js.map",
+    "runtime-main.js": "/todo-management-react-redux/static/js/runtime-main.c6ea28c7.js",
+    "runtime-main.js.map": "/todo-management-react-redux/static/js/runtime-main.c6ea28c7.js.map",
+    "static/js/2.0cf8aeb3.chunk.js": "/todo-management-react-redux/static/js/2.0cf8aeb3.chunk.js",
+    "static/js/2.0cf8aeb3.chunk.js.map": "/todo-management-react-redux/static/js/2.0cf8aeb3.chunk.js.map",
+    "index.html": "/todo-management-react-redux/index.html",
+    "static/css/main.879325a2.chunk.css.map": "/todo-management-react-redux/static/css/main.879325a2.chunk.css.map",
+    "static/js/2.0cf8aeb3.chunk.js.LICENSE.txt": "/todo-management-react-redux/static/js/2.0cf8aeb3.chunk.js.LICENSE.txt",
+    "static/media/logo.232e8696.jpg": "/todo-management-react-redux/static/media/logo.232e8696.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c6ea28c7.js",
+    "static/js/2.0cf8aeb3.chunk.js",
+    "static/css/main.879325a2.chunk.css",
+    "static/js/main.a823de76.chunk.js"
+  ]
+}
