@@ -12,7 +12,8 @@ import DashboardContext from '../context/DashboardContext';
 export default function ToolbarUI(props){
     const {classes} = props;
     const {
-      drawerOpen, setDrawerOpen
+      drawerOpen, setDrawerOpen,
+      username, logout,
     } = useContext(DashboardContext);
     return (
         <AppBar
@@ -39,9 +40,10 @@ export default function ToolbarUI(props){
             noWrap
             className={classes.title}
           >
-            Dashboard
+            {username}
           </Typography>
-          <IconButton color="inherit">
+          <IconButton color="inherit"
+            onClick={() => logout()}>
             <ExitToApp />
           </IconButton>
         </Toolbar>

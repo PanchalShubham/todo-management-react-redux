@@ -5,11 +5,11 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import MuiAlert from "@material-ui/lab/Alert";
+import Logo from '../../assets/logo.jpg';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -53,9 +53,7 @@ export default function AuthFormUI(props) {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
+        <Avatar className={classes.avatar} src={Logo} />
         <Typography component="h1" variant="h5">
           TodoApp - {isSignup ? "Sign Up" : "Sign In"}
         </Typography>

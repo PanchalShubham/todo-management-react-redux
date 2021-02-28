@@ -12,7 +12,7 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import DashboardContext from '../context/DashboardContext';
 
-const MAX_TITLE_LENGTH = 10;
+const MAX_TITLE_LENGTH = 100;
 const useStyles = makeStyles((theme) => ({
   form: {
     width: "100%", // Fix IE 11 issue.
@@ -38,8 +38,8 @@ export default function EditTodoUI(props) {
   const {
     selectedTodo, saveTodoHandler, closeTodoModal
   } = useContext(DashboardContext);
-  const [title, setTitle] = useState(selectedTodo ? selectedTodo.title : '');
-  const [summary, setSummary] = useState(selectedTodo ? selectedTodo.summary : '');
+  const [title, setTitle] = useState(selectedTodo ? selectedTodo.title : 'title');
+  const [summary, setSummary] = useState(selectedTodo ? selectedTodo.summary : 'summary');
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
@@ -47,7 +47,7 @@ export default function EditTodoUI(props) {
     if (length > MAX_TITLE_LENGTH) return;
     if (length === 0) return;
     closeTodoModal();
-    saveTodoHandler(selectedTodo ? selectedTodo.id : null, title, summary);
+    saveTodoHandler(selectedTodo, title, summary);
   };
 
   return (

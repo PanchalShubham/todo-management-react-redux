@@ -9,8 +9,9 @@ import SideBarUI from './SideBarUI';
 import ToolbarUI from './ToolbarUI';
 import EditTodoUI from './EditTodoUI';
 import TodosListUI from './TodosListUI';
+import DeleteModalUI from './DeleteModalUI';
 import DashboardContext from '../context/DashboardContext';
-import * as TodoOperation from '../containers/TodoOperation';
+import * as Filters from '../../redux/constants/filters';
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
@@ -125,6 +126,7 @@ export default function DashboardUI(props) {
   const classes = useStyles();
   const {
     showTodoModal, setShowTodoModal,
+    showDeleteModal, setShowDeleteModal,
     selectedOperation
   } = useContext(DashboardContext);
 
@@ -143,10 +145,11 @@ export default function DashboardUI(props) {
         </Container>
       </main>
       {showTodoModal && <EditTodoUI />}
+      {showDeleteModal && <DeleteModalUI />}
       <span className={classes.stickyFooter}>
-        {selectedOperation === TodoOperation.DELETED_TODOS &&
+        {selectedOperation === Filters.DELETED_TODOS &&
         <Button className={classes.emptyTrashButton} 
-          onClick={() => setShowTodoModal(true)}>
+          onClick={() => setShowDeleteModal(true)}>
           <Cancel className="addTodoButton" />
         </Button>}
         <Button  className={classes.addTodoButton}

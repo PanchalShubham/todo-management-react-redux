@@ -90,8 +90,8 @@ export default function TodosListUI() {
     const {todos} = useContext(DashboardContext);
     const classes = useStyles2();
     const isAppView = (window.innerWidth < 650);
-    const rows = todos.map(todo => ({ id: todo.id, ui: <TodoUI todo={todo} /> }));
-    if (rows.length === 0)  rows.push({id: 0, ui: <h3 className={classes.empty}>Yay! You don't have any todos here!</h3>});
+    const rows = todos.map(todo => ({ id: todo.id, createdAt: todo.createdAt, ui: <TodoUI todo={todo} /> }));
+    if (rows.length === 0)  rows.push({id: 0, ui: <h3 className={classes.empty}>You don't have any todos here!</h3>});
 
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(isAppView ? rows.length : 5);
